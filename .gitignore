@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+backend/.venv/
+.venv/
+
+# Database (regenerated via seed.py)
+*.db
+
+# Build artifacts
+docs/Documentation.html
+
+# OS
+.DS_Store
