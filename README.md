@@ -205,9 +205,6 @@ LearnHub/
 ---
 
 <div align="center">
-
-**Built for the System Design Final Examination** · June 2026
-
 <sub>FastAPI ⚡ · SQLAlchemy 🗄️ · vanilla JS 🎨</sub>
 
 </div>
