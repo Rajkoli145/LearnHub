@@ -74,7 +74,7 @@ flowchart TD
     R -->|SQLAlchemy ORM| D[("🗄️ SQLite — learnhub.db")]
 ```
 
-> Detailed architecture, flow, and ER diagrams live in [`learnhubdiagrams/`](./learnhubdiagrams).
+> Detailed architecture, flow, and ER diagrams live in [`learnhubdiagrams/`](https://excalidraw.com/#json=84BUzMuQun2fK3pBs09Rl,zZSatXRwCkbacMI8ZnIGnQ).
 
 ---
 
