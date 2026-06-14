@@ -31,7 +31,7 @@
 
 </div>
 
-> **GitHub Repository:** `https://github.com/Rajkoli143/LearnHub` &nbsp;<sub>← replace with your actual repo URL after pushing</sub>
+> **GitHub Repository:** `https://github.com/Rajkoli143/LearnHub` &nbsp;
 
 ---
 
