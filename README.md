@@ -1,74 +1,100 @@
-# LearnHub — Online Learning Platform
+<div align="center">
 
-> System Design Final Examination Project
+# 🎓 LearnHub
 
-LearnHub is an online learning platform where **instructors** publish courses
-(sections → lessons → quizzes) and **learners** browse a catalog, enroll, track
-progress, and take auto-graded quizzes. The backend is a modular **FastAPI**
-service over **SQLAlchemy + SQLite**, with a lightweight **vanilla-JS** frontend.
+### Online Learning Platform
 
-**GitHub Repository:** `https://github.com/Rajkoli143/LearnHub`
-<!-- ↑ Replace with your actual repo URL after pushing. -->
+*Where instructors publish courses and learners enroll, track progress, and prove mastery with auto-graded quizzes.*
 
----
+<br/>
 
-## 1. Project Overview
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=for-the-badge&logo=sqlalchemy&logoColor=white)](https://www.sqlalchemy.org/)
+[![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://www.sqlite.org/)
+[![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)](https://jwt.io/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/docs/Web/JavaScript)
 
-| | |
-|---|---|
-| **Domain** | E-learning / EdTech |
-| **Backend** | Python 3.11+, FastAPI, SQLAlchemy ORM |
-| **Database** | SQLite (file-based; Postgres-ready) |
-| **Auth** | JWT (PyJWT) + PBKDF2 password hashing, role-based access |
-| **Frontend** | HTML + CSS + vanilla JavaScript (no build step) |
-| **API Docs** | Auto-generated Swagger UI at `/docs` |
+<br/>
 
-### Core Modules (fully implemented)
-- **Auth** — register, login, JWT sessions, roles (learner / instructor / admin)
-- **Courses** — CRUD for courses, sections, and lessons; public search + filter
-- **Enrollment** — enroll, list "My Learning", update lesson progress
-- **Quizzes** — instructor authoring, server-side auto-scoring, attempt limits
+**Tech Stack**
 
-### Stubbed (documented as Future Scope)
-Payments (Razorpay), media/CDN upload, full-text search ranking,
-recommendation engine, background task queue, email/OTP service.
+<img src="https://skillicons.dev/icons?i=python,fastapi,sqlite,js,html,css&theme=light" alt="tech stack" />
 
----
+<br/>
 
-## 2. Architecture (summary)
+[![Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github)](https://github.com/Rajkoli143/LearnHub)
+&nbsp;
+![Status](https://img.shields.io/badge/status-complete-success?style=flat-square)
+&nbsp;
+![Project](https://img.shields.io/badge/System%20Design-Final%20Project-6c2bd9?style=flat-square)
 
-```
-Browser (vanilla JS SPA)
-        │  REST / JSON + JWT
-        ▼
-FastAPI app  ──►  Routers: auth · courses · enrollments · quizzes
-        │
-        ▼
-SQLAlchemy ORM  ──►  SQLite (learnhub.db)
-```
+</div>
 
-Detailed diagrams are in `learnhubdiagrams/` (architecture, flows, ER models).
+> **GitHub Repository:** `https://github.com/Rajkoli143/LearnHub` &nbsp;<sub>← replace with your actual repo URL after pushing</sub>
 
 ---
 
-## 3. Dependencies
+## 📌 Project Overview
 
-Listed in `backend/requirements.txt`:
+LearnHub is a modular **FastAPI** service over **SQLAlchemy + SQLite**, paired with a lightweight
+**vanilla-JS** frontend in a *Bold &amp; Creative* theme. The architecture cleanly separates four
+concerns so each can scale and evolve independently.
 
-```
-fastapi          # web framework
-uvicorn          # ASGI server
-SQLAlchemy       # ORM
-PyJWT            # JWT auth tokens
-pydantic[email]  # request/response validation
-```
+<table>
+<tr><td><b>🏷️ Domain</b></td><td>E-learning / EdTech</td></tr>
+<tr><td><b>⚙️ Backend</b></td><td>Python 3.11+, FastAPI, SQLAlchemy ORM</td></tr>
+<tr><td><b>🗄️ Database</b></td><td>SQLite (file-based; Postgres-ready)</td></tr>
+<tr><td><b>🔐 Auth</b></td><td>JWT (PyJWT) + PBKDF2 hashing, role-based access</td></tr>
+<tr><td><b>🎨 Frontend</b></td><td>HTML + CSS + vanilla JavaScript (no build step)</td></tr>
+<tr><td><b>📖 API Docs</b></td><td>Auto-generated Swagger UI at <code>/docs</code></td></tr>
+</table>
 
-Password hashing uses Python's standard-library `hashlib` (PBKDF2) — no native
-build dependencies.
+### ✅ Core Modules (fully implemented)
+
+| Module | What it does |
+|:--|:--|
+| 🔐 **Auth** | register, login, JWT sessions, roles (learner / instructor / admin) |
+| 📚 **Courses** | CRUD for courses, sections, and lessons; public search + filter |
+| 🎟️ **Enrollment** | enroll, list "My Learning", update lesson progress |
+| 📝 **Quizzes** | instructor authoring, server-side auto-scoring, attempt limits |
+
+### 🧩 Stubbed (documented as Future Scope)
+
+> Payments (Razorpay) · media/CDN upload · full-text search ranking · recommendation engine · background task queue · email/OTP service
 
 ---
 
-## 4. Setup Instructions
+## 🏛️ Architecture
+
+```mermaid
+flowchart TD
+    A["🌐 Browser — vanilla-JS SPA"] -->|REST / JSON + JWT| B["⚡ FastAPI App"]
+    B --> R["Routers: auth · courses · enrollments · quizzes"]
+    R -->|SQLAlchemy ORM| D[("🗄️ SQLite — learnhub.db")]
+```
+
+> Detailed architecture, flow, and ER diagrams live in [`learnhubdiagrams/`](./learnhubdiagrams).
+
+---
+
+## 📦 Dependencies
+
+Listed in [`backend/requirements.txt`](./backend/requirements.txt):
+
+| Package | Role |
+|:--|:--|
+| `fastapi` | web framework |
+| `uvicorn` | ASGI server |
+| `SQLAlchemy` | ORM |
+| `PyJWT` | JWT auth tokens |
+| `pydantic[email]` | request/response validation |
+
+> 🔒 Password hashing uses the standard-library `hashlib` (PBKDF2) — **no native build dependencies**.
+
+---
+
+## 🛠️ Setup Instructions
 
 ```bash
 # 1. Go to the backend
@@ -87,7 +113,7 @@ python seed.py
 
 ---
 
-## 5. Execution Steps
+## ▶️ Execution Steps
 
 ```bash
 # From the backend/ directory, with the venv active:
@@ -97,19 +123,20 @@ uvicorn app.main:app --reload
 Then open:
 
 | URL | What |
-|---|---|
-| http://127.0.0.1:8000/ | **Web app** (frontend) |
-| http://127.0.0.1:8000/docs | **Swagger API docs** (interactive) |
-| http://127.0.0.1:8000/api/health | Health check |
+|:--|:--|
+| <http://127.0.0.1:8000/> | 🎨 **Web app** (frontend) |
+| <http://127.0.0.1:8000/docs> | 📖 **Swagger API docs** (interactive) |
+| <http://127.0.0.1:8000/api/health> | ❤️ Health check |
 
-### Demo accounts (password: `Passw0rd!`)
+### 👤 Demo accounts &nbsp;<sub>(password: `Passw0rd!`)</sub>
+
 | Email | Role |
-|---|---|
-| `learner@learnhub.dev` | learner (pre-enrolled in a course) |
-| `instructor@learnhub.dev` | instructor (owns the sample courses) |
+|:--|:--|
+| `learner@learnhub.dev` | learner *(pre-enrolled in a course)* |
+| `instructor@learnhub.dev` | instructor *(owns the sample courses)* |
 | `admin@learnhub.dev` | admin |
 
-### Try it
+### 🚀 Try it
 1. Open `/` → browse the **Course Catalog**.
 2. **Login** as the learner → **My Learning** shows progress.
 3. Open *Python for Beginners* → **Take Quiz** → submit → see auto-graded score.
@@ -117,28 +144,28 @@ Then open:
 
 ---
 
-## 6. API Reference (main endpoints)
+## 🔗 API Reference
 
 | Method | Path | Module | Auth |
-|---|---|---|---|
-| POST | `/api/auth/register` | Auth | — |
-| POST | `/api/auth/login` | Auth | — |
-| GET | `/api/auth/me` | Auth | JWT |
-| GET | `/api/courses?q=&category=` | Courses | — |
-| GET | `/api/courses/{id}` | Courses | — |
-| POST | `/api/courses` | Courses | instructor/admin |
-| POST | `/api/courses/{id}/sections` | Courses | owner |
-| POST | `/api/courses/sections/{id}/lessons` | Courses | owner |
-| POST | `/api/enrollments/{course_id}` | Enrollment | JWT |
-| GET | `/api/enrollments` | Enrollment | JWT |
-| PATCH | `/api/enrollments/{id}/progress` | Enrollment | JWT |
-| POST | `/api/courses/{id}/quizzes` | Quizzes | owner |
-| GET | `/api/quizzes/{id}` | Quizzes | JWT |
-| POST | `/api/quizzes/{id}/submit` | Quizzes | JWT |
+|:--:|:--|:--|:--:|
+| `POST` | `/api/auth/register` | Auth | — |
+| `POST` | `/api/auth/login` | Auth | — |
+| `GET` | `/api/auth/me` | Auth | 🔑 JWT |
+| `GET` | `/api/courses?q=&category=` | Courses | — |
+| `GET` | `/api/courses/{id}` | Courses | — |
+| `POST` | `/api/courses` | Courses | 🛡️ instructor/admin |
+| `POST` | `/api/courses/{id}/sections` | Courses | 🛡️ owner |
+| `POST` | `/api/courses/sections/{id}/lessons` | Courses | 🛡️ owner |
+| `POST` | `/api/enrollments/{course_id}` | Enrollment | 🔑 JWT |
+| `GET` | `/api/enrollments` | Enrollment | 🔑 JWT |
+| `PATCH` | `/api/enrollments/{id}/progress` | Enrollment | 🔑 JWT |
+| `POST` | `/api/courses/{id}/quizzes` | Quizzes | 🛡️ owner |
+| `GET` | `/api/quizzes/{id}` | Quizzes | 🔑 JWT |
+| `POST` | `/api/quizzes/{id}/submit` | Quizzes | 🔑 JWT |
 
 ---
 
-## 7. Project Structure
+## 🗂️ Project Structure
 
 ```
 LearnHub/
@@ -161,15 +188,26 @@ LearnHub/
 │   ├── style.css
 │   └── app.js               # vanilla-JS SPA
 ├── learnhubdiagrams/        # architecture, flow & ER diagrams
+├── docs/                    # project documentation PDF + builder
 └── README.md
 ```
 
 ---
 
-## 8. Future Scope
-- Razorpay payment gateway + webhook-confirmed paid enrollment
-- Media uploads to S3/CDN with presigned URLs and video streaming
-- PostgreSQL + Alembic migrations; full-text search (`tsvector`) with ranking
-- ML recommendation engine (scikit-learn) and personalized course feed
-- Celery task queue for emails, certificate generation, analytics
-- Email / OTP verification and password reset
+## 🔭 Future Scope
+- 💳 Razorpay payment gateway + webhook-confirmed paid enrollment
+- 🎬 Media uploads to S3/CDN with presigned URLs and video streaming
+- 🐘 PostgreSQL + Alembic migrations; full-text search (`tsvector`) with ranking
+- 🤖 ML recommendation engine (scikit-learn) and personalized course feed
+- 📨 Celery task queue for emails, certificate generation, analytics
+- 📧 Email / OTP verification and password reset
+
+---
+
+<div align="center">
+
+**Built for the System Design Final Examination** · June 2026
+
+<sub>FastAPI ⚡ · SQLAlchemy 🗄️ · vanilla JS 🎨</sub>
+
+</div>
