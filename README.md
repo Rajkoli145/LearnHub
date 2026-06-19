@@ -31,7 +31,7 @@
 
 </div>
 
-> **GitHub Repository:** `https://github.com/Rajkoli143/LearnHub` &nbsp;
+> **GitHub Repository:** <https://github.com/Rajkoli143/LearnHub>
 
 ---
 
