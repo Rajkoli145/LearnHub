@@ -23,7 +23,7 @@
 
 <br/>
 
-[![Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github)](https://github.com/Rajkoli143/LearnHub)
+[![Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github)](https://github.com/Rajkoli145/LearnHub)
 &nbsp;
 ![Status](https://img.shields.io/badge/status-complete-success?style=flat-square)
 &nbsp;
@@ -31,7 +31,7 @@
 
 </div>
 
-> **GitHub Repository:** <https://github.com/Rajkoli143/LearnHub>
+> **GitHub Repository:** <https://github.com/Rajkoli145/LearnHub>
 
 ---
 

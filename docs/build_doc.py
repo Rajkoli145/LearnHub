@@ -27,33 +27,38 @@ HTML = f"""<!DOCTYPE html>
 <style>
   @page {{ size: A4; margin: 18mm 16mm; }}
   * {{ box-sizing: border-box; }}
-  body {{ font-family: 'Segoe UI', Arial, sans-serif; color: #1a1a2e; line-height: 1.5; font-size: 12.5px; }}
-  h1 {{ font-size: 30px; margin: 0; }}
-  h2 {{ font-size: 19px; border-bottom: 2px solid #5b8cff; padding-bottom: 4px; margin-top: 26px; color: #21305b; }}
-  h3 {{ font-size: 15px; color: #21305b; margin-bottom: 4px; }}
-  .cover {{ text-align: center; padding: 120px 0 80px; }}
-  .cover .sub {{ color: #5b8cff; font-size: 18px; margin-top: 8px; }}
-  .cover .meta {{ margin-top: 60px; color: #555; font-size: 14px; }}
+  body {{ font-family: 'Segoe UI', Arial, sans-serif; color: #111; line-height: 1.55; font-size: 12.5px; }}
+  h1 {{ font-size: 32px; margin: 0; color: #000; letter-spacing: 0.5px; }}
+  h2 {{ font-size: 19px; border-bottom: 2px solid #000; padding-bottom: 4px; margin-top: 26px; color: #000; }}
+  h3 {{ font-size: 15px; color: #000; margin-bottom: 4px; }}
+  .cover {{ text-align: center; padding: 110px 0 80px; border: 2px solid #000; border-radius: 6px; }}
+  .cover .sub {{ color: #333; font-size: 18px; margin-top: 8px; letter-spacing: 2px; text-transform: uppercase; }}
+  .cover .rule {{ width: 80px; height: 3px; background: #000; margin: 22px auto; }}
+  .cover .meta {{ margin-top: 56px; color: #222; font-size: 14px; }}
+  .cover .meta p {{ margin: 7px 0; }}
   table {{ border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 11.5px; }}
-  th, td {{ border: 1px solid #cbd2e8; padding: 6px 9px; text-align: left; vertical-align: top; }}
-  th {{ background: #eef2fb; }}
-  code {{ background: #eef2fb; padding: 1px 5px; border-radius: 4px; font-size: 11px; }}
-  pre {{ background: #1a1f33; color: #e8eaf5; padding: 12px; border-radius: 8px; overflow-x: auto; font-size: 11px; }}
+  th, td {{ border: 1px solid #444; padding: 6px 9px; text-align: left; vertical-align: top; }}
+  th {{ background: #000; color: #fff; }}
+  code {{ background: #f0f0f0; padding: 1px 5px; border-radius: 4px; font-size: 11px; color: #000; }}
+  pre {{ background: #000; color: #f5f5f5; padding: 12px; border-radius: 6px; overflow-x: auto; font-size: 11px; }}
   .pagebreak {{ page-break-before: always; }}
   figure {{ margin: 12px 0; text-align: center; }}
-  figure img {{ max-width: 100%; border: 1px solid #cbd2e8; border-radius: 8px; }}
-  figcaption {{ color: #666; font-size: 11px; margin-top: 4px; }}
+  figure img {{ max-width: 100%; border: 1px solid #444; border-radius: 6px; }}
+  figcaption {{ color: #555; font-size: 11px; margin-top: 4px; }}
   ul {{ margin: 6px 0; }}
 </style></head><body>
 
 <div class="cover">
-  <h1>🎓 LearnHub</h1>
+  <h1>LearnHub</h1>
   <div class="sub">Online Learning Platform</div>
-  <p style="margin-top:30px; font-size:15px; color:#444;">System Design — Final Examination Project Documentation</p>
+  <div class="rule"></div>
+  <p style="margin-top:30px; font-size:15px; color:#222;">System Design — Final Examination Project Documentation</p>
   <div class="meta">
-    <p><b>Submitted by:</b> ______________________</p>
-    <p><b>Roll No:</b> ______________________</p>
+    <p><b>Submitted by:</b> Raj Koli</p>
+    <p><b>Roll No:</b> 150096724145</p>
+    <p><b>Topic:</b> Designing an Online Learning Platform like Coursera</p>
     <p><b>Course:</b> System Design</p>
+    <p><b>GitHub Repository:</b> https://github.com/Rajkoli145/LearnHub</p>
     <p><b>Date:</b> June 2026</p>
   </div>
 </div>
